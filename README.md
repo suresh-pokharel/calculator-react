@@ -1,6 +1,9 @@
 # calculator-react
 A simple calculator application using JavaScript library React JS
 
+![Calculator Image](https://image.ibb.co/cT0CAa/calculator.jpg)
+
+
 ##Information
 * Two react objects Square and Board are created. Square renders a square with a props 'number'. Board renders number of squares(In my case 16 squares)
 
