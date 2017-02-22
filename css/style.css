@@ -1,0 +1,40 @@
+	.square{
+		height: 70px;
+		width: 70px;
+		background-color: #ccc;
+		border: 3px solid #888;
+		font-size: xx-large;
+	}
+	.square:hover{
+		height: 70px;
+		width: 70px;
+		background-color: #ddd;
+		border: 3px solid #888;
+		font-size: xx-large;
+	}
+	.board-row{
+		clear: both;
+		content: "";
+		display: table;
+	}
+
+	.board{
+		margin: 0px auto;
+		width: 280px;
+		align-self: center;
+	}
+
+	.screen{
+		margin: 0px auto;
+		width: 280px;
+		align-self: center;
+	}
+
+	input{
+		width: 274px;
+		border: 3px solid #888;
+		height: 60px;
+		font-size: xx-large;
+
+	}
+	

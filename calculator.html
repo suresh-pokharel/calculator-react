@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- Calculator using React JS By psuresh.com.np -->
+	<title>Calculator Using React JS </title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+<div class="screen">
+	<input type="text" id="result">
+</div>
+<div id="container"></div>
+	<script type="text/babel">
+		class Square extends React.Component{
+			render(){
+				//console.log(this.props.number)
+				return(
+					<button className='square' onClick={(e) =>this.clickHandler(e)}>
+						{this.props.number}
+					</button>
+				);
+			}
+
+			clickHandler(){
+				var txtString=document.getElementById('result');
+				var lastCharacter = txtString.value.substr(txtString.value.length - 1);
+				var result;
+				//if previous character is already a symbol or non numeric character,avoid following symbol
+
+				if (lastCharacter<'0' || lastCharacter>'9') { //if previous character is not numeric
+					if (this.props.number<'0' || this.props.number>'9') { //if current character is non numeric
+							console.log("I can't calculate this.");//two symbols come together or non numeric items entered
+
+					}else if(this.props.number!='='){
+						txtString.value+=this.props.number;
+						txtString.focus();
+					}
+				}else{
+							if(this.props.number=='='){
+								result= eval(txtString.value);
+								txtString.value=result;
+								console.log(result);
+							}else{
+								txtString.value+=this.props.number;
+								txtString.focus();
+							}
+				}
+			}
+		
+		}
+
+		class Board extends React.Component{
+			renderSquare(i){
+				const squares = this.props.squares;
+				return <Square number={i}/>;
+			}
+
+			render(){
+				return(
+				<div className="board">
+					<div className="board-row">
+					  {this.renderSquare(1)}
+					  {this.renderSquare(2)}
+					  {this.renderSquare(3)}
+					  {this.renderSquare('/')}
+
+					</div>
+					<div className="board-row">
+					  {this.renderSquare(4)}
+					  {this.renderSquare(5)}
+					  {this.renderSquare(6)}
+					  {this.renderSquare('*')}
+
+					</div>
+					<div className="board-row">
+					  {this.renderSquare(7)}
+					  {this.renderSquare(8)}
+					  {this.renderSquare(9)}
+					  {this.renderSquare('+')}
+
+					</div>
+					<div className="board-row">
+					  {this.renderSquare('.')}
+					  {this.renderSquare('0')}
+					  {this.renderSquare('=')}
+					  {this.renderSquare('-')}
+
+					</div>
+				</div>
+				);
+			}
+		}
+
+ReactDOM.render(
+  <Board />,
+  document.getElementById('container')
+);
+</script>
+<script src="js/react.js"></script>
+	<script src="js/react-dom.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.24/browser.min.js"></script>
+</body>
+</html>
