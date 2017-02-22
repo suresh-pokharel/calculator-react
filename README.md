@@ -23,3 +23,6 @@ A simple calculator application using JavaScript library React JS
 
 ##Dependencies needed
 `react.js` and `react-dom.js` are included in js folder. `browser.min.js` is to run JSX, CDN is included.
+
+##Demo
+http://psuresh.com.np/Miscellaneous/calculator
