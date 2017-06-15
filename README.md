@@ -25,4 +25,4 @@ A simple calculator application using JavaScript library React JS
 `react.js` and `react-dom.js` are included in js folder. `browser.min.js` is to run JSX, CDN is included.
 
 ##Demo
-http://psuresh.com.np/misc/calculator
+http://projects.psuresh.com.np/calculator
