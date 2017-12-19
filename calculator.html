@@ -38,7 +38,7 @@
 
 				if (lastCharacter<'0' || lastCharacter>'9') { //if previous character is not numeric
 					if (this.props.number<'0' || this.props.number>'9') { //if current character is non numeric
-							console.log("I can't calculate this.");//two symbols come together or non numeric items entered
+							console.log("I can't calculate this."); //two symbols come together or non numeric items entered
 
 					}else if(this.props.number!='='){
 						txtString.value+=this.props.number;
@@ -72,7 +72,6 @@
 					  {this.renderSquare(2)}
 					  {this.renderSquare(3)}
 					  {this.renderSquare('/')}
-
 					</div>
 					<div className="board-row">
 					  {this.renderSquare(4)}
@@ -86,14 +85,12 @@
 					  {this.renderSquare(8)}
 					  {this.renderSquare(9)}
 					  {this.renderSquare('+')}
-
 					</div>
 					<div className="board-row">
 					  {this.renderSquare('.')}
 					  {this.renderSquare('0')}
 					  {this.renderSquare('=')}
 					  {this.renderSquare('-')}
-
 					</div>
 				</div>
 				);
